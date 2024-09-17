@@ -7,12 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const message = document.getElementById('message');
   const iceCreamList = ['Vanília', 'Csokoládé', 'Eper', 'Puncs'];
 
-  // Jelszó hossz számláló
   passwordInput.addEventListener('input', () => {
     passwordLength.textContent = `${passwordInput.value.length} / 8`;
   });
 
-  // Név mező validáció
   nameInput.addEventListener('blur', () => {
     if (nameInput.value.trim() === '') {
       nameInput.style.border = '2px solid red';
@@ -21,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Fagylalt mező validáció
   iceCreamInput.addEventListener('blur', () => {
     if (iceCreamList.includes(iceCreamInput.value)) {
       iceCreamInput.style.backgroundColor = 'lightgreen';
@@ -30,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Űrlap elküldése
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const selectedIceCream = iceCreamInput.value;
