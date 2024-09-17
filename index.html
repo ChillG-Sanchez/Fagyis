@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fagylalt Rendelés</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Fagylalt Rendelés</h1>
+    <form id="iceCreamForm">
+      <div class="form-group">
+        <label for="name">Saját név:</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Jelszó (min 8 karakter):</label>
+        <input type="password" class="form-control" id="password" minlength="8" required>
+        <small id="passwordLength" class="form-text text-muted">0 / 8</small>
+      </div>
+      <div class="form-group">
+        <label for="iceCream">Választott fagylalt:</label>
+        <input type="text" class="form-control" id="iceCream" list="iceCreamList" required>
+        <datalist id="iceCreamList">
+          <option value="Vanília">
+          <option value="Csokoládé">
+          <option value="Eper">
+          <option value="Puncs">
+        </datalist>
+      </div>
+      <button type="submit" class="btn btn-primary">Rendelés</button>
+    </form>
+    <p id="message" class="mt-3"></p>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
